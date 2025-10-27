@@ -110,6 +110,24 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.45);
     }
 
+    .text {
+      position: relative;
+      z-index: 2;
+      color: white;
+      font-size: 24px;
+    }
+
+    video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+
     /* Кнопка-звук (иконка) */
     .mute-btn{
       display:inline-grid;
@@ -131,9 +149,6 @@
 </head>
 <body>
 
-    <p style="position:absolute; bottom:10px; left:10px; color:white;">Обновлено 27.10.2025</p>
-
-
   <div class="video-wrap" aria-hidden="true">
     <!-- Положи сюда video.mp4 (или укажи путь) -->
     <video id="bgVideo" src="rozetka.mp4"
@@ -145,6 +160,10 @@
            tabindex="-1"
            aria-hidden="true"></video>
   </div>
+
+    <div class="text">
+        <h1>Обновлено 27.10.2025</h1>
+    </div>
 
   <!-- Панель с регулятором громкости -->
   <div class="controls" role="region" aria-label="Регулятор громкости">
